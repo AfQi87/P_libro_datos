@@ -69,7 +69,7 @@
                     <form action="agregarRegla.php?id='.$id.'&coleccion='.$coleccion.'&estado='.$estado.'" method="POST">
                       <div class="mb-3">
                         <label for="id_cli" class="form-label">Identificación</label>
-                        <input type="number" class="form-control" id="id_cli" name="id_cli" required >
+                        <input type="number" class="form-control" id="id_cli" name="id_cli" required value="1000000000">
                       </div>
                   </div>
                   <div class="modal-footer">

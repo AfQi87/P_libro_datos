@@ -81,7 +81,16 @@
         $codigo = 'VALIDO';
       }else{
         $codigo = 'NO_VALIDO';
-        exit();
+        echo('
+          <script>
+            swal({
+              title: "Libro no apto para préstamo",
+              text: "El Código del libro no es válido",
+              icon: "error",
+              button: "Aceptar",
+            });
+          </script>
+        ');
       }
       //==============================================================================Regla1 premisa2 :: regla5 premisa2
       $sql = "SELECT valor FROM obj_regla
@@ -112,14 +121,13 @@
         echo('
           <script>
             swal({
-              title: "Error",
+              title: "Libro no apto para préstamo",
               text: "El libro no esta disponible para consulta Externa",
               icon: "error",
               button: "Aceptar",
             });
           </script>
         ');
-
       }
       echo('Consulta: '.$consulta.'<br>');
 
@@ -129,6 +137,24 @@
         $libro = 'APTO';
       }else{
         $libro = 'NO_APTO';
+        echo('
+          <script>
+          swal({
+            title: "Libro No Apto",
+            text: "El libro no cumple las condiciones para el prestamo",
+            icon: "error",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((value) => {
+            if (value) {
+              swal("Your imaginary file is safe!");
+            } else {
+              swal("Your imaginary file is safe!");
+            }
+          });
+          </script>
+        ');
       }
       echo('libro: '.$libro.'<br><br>');
 
