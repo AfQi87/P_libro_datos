@@ -137,3 +137,22 @@ $(document).ready(function () {
     },
   });
 });
+
+//========================================================================Buscar
+function buscar(cont) {
+  var esperar = 2000;
+  $.ajax({
+    type: "POST",
+    data: $("#formLibros" + cont).serialize(),
+    url: "./agregarRegla.php",
+    beforeSend: function () {
+      Swal.fire("Buscando Información", "Por favor espere!!", "warning");
+    },
+    success: function (datos) {
+      setTimeout(function () {
+        $("#resultado").html(datos);
+        console.log(datos);
+      }, esperar);
+    },
+  });
+}

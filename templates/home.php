@@ -66,7 +66,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <form action="agregarRegla.php?id='.$id.'&coleccion='.$coleccion.'&estado='.$estado.'" method="POST">
+                    <form class="formLibros'.$j.'" id="formLibros'.$j.'" method="POST">
+                      <input type="hidden" id="index" name="index" value="'.$j.'">
+                      <input type="hidden" id="id" name="id" value="'.$id.'">
+                      <input type="hidden" id="coleccion" name="coleccion" value="'.$coleccion.'">
+                      <input type="hidden" id="estado" name="estado" value="'.$estado.'">
                       <div class="mb-3">
                         <label for="id_cli" class="form-label">Identificación</label>
                         <input type="number" class="form-control" id="id_cli" name="id_cli" required value="1000000000">
@@ -74,7 +78,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" name="enviar" id="enviar" value="Enviar" class="btn btn-success">
+                    <input type="button" name="enviar'.$j.'" id="enviar'.$j.'" value="Enviar'.$j.'" onclick="buscar('.$j.');" class="btn btn-success">
                     </form>
                   </div>
                 </div>
@@ -83,6 +87,7 @@
         </tr>
       ');
     }
+    echo(' <div id="resultado"></div> ');
     echo('
             </tbody>
             <tfoot>
