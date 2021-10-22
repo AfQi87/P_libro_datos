@@ -9,3 +9,24 @@
     margin-top: 10%;
 }
 
+img{
+  margin-left: 300px;
+  width: 50%;
+  height: 300px;
+}
+
+.reglas{
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 85%;
+  height: 450px;
+}
+.imagen1{
+  margin-bottom: -15px;
+}
+.bd{
+  margin-left: 100px;
+  margin-top: 20px;
+  width: 85%;
+  height: 800px;
+}

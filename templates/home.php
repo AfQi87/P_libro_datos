@@ -78,7 +78,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="button" name="enviar'.$j.'" id="enviar'.$j.'" value="Enviar'.$j.'" onclick="buscar('.$j.');" class="btn btn-success">
+                    <input type="button" name="enviar'.$j.'" id="enviar'.$j.'" value="Enviar" onclick="buscar('.$j.');" class="btn btn-success">
                     </form>
                   </div>
                 </div>

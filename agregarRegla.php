@@ -179,7 +179,7 @@
         array_push($reglas, 'R4');
       }
 
-      //==============================================================================regla1 premisa3 :: validacion
+      //==============================================================================regla1  validacion
       if ((strcmp($busqueda, $r1p1_bus_val) === 0) && (strcmp($libro, $r1p2_lib_val) === 0) && (strcmp($usuario, $r1p3_usu_val) === 0)){
         $prestamo = 'APROBADO';
         array_push($reglas, 'R1');
